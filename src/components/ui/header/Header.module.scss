@@ -19,7 +19,6 @@
     font-weight: 700;
     letter-spacing: -2.4px;
 
-    color: var(--white);
     background: var(--bg-color);
     border-radius: 0 0 1rem 0;
 
@@ -78,4 +77,5 @@
 }
 
 .link__img {
+  display: block;
 }
