@@ -1,19 +1,19 @@
-import type { Metadata } from "next";
-import "../styles/global.scss";
+import type { Metadata } from 'next'
+import '../styles/global.scss'
 
 export const metadata: Metadata = {
-  title: "idk-fi",
-  description: "Description",
-};
+  title: 'idk-fi',
+  description: 'Description',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="body">{children}</body>
+    <html lang='en'>
+      <body className='body'>{children}</body>
     </html>
-  );
+  )
 }

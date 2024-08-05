@@ -1,0 +1,99 @@
+.bar {
+  position: relative;
+
+  max-width: 37.5rem;
+  width: 100%;
+
+  padding: 1rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  border-radius: 0.8rem 0.8rem 0 0;
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0.75) 19%, #111 100%);
+  backdrop-filter: blur(8px);
+
+  &::after,
+  &::before {
+    content: '';
+
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url(/icons/rec.svg);
+  }
+
+  &::after {
+    right: -1.5rem;
+    bottom: 0;
+    transform: rotate(270deg);
+  }
+
+  &::before {
+    left: -1.5rem;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.25rem;
+  }
+
+  &__control {
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    transition: var(--nav-elem-transition);
+    cursor: pointer;
+    &:hover {
+      background: var(--selected-bg);
+    }
+  }
+
+  &__track {
+    width: 15.25rem;
+
+    display: flex;
+    flex-grow: 1;
+
+    overflow: hidden;
+
+    padding: 0.5rem 0.75rem;
+
+    border-radius: 0.75rem;
+
+    background: var(--selected-bg);
+  }
+}
+
+.track__name {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1rem;
+  letter-spacing: -0.7px;
+}
+
+.menu {
+  display: flex;
+  gap: 0.5rem;
+
+  &__item {
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+
+    transition: var(--nav-elem-transition);
+    cursor: pointer;
+    &:hover {
+      background: var(--selected-bg);
+    }
+  }
+}
